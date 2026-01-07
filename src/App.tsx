@@ -5,7 +5,6 @@ import { Login } from './pages/Login';
 import { Dashboard } from './pages/Dashboard';
 import { EmployeeForm } from './pages/EmployeeForm';
 import { ProtectedRoute } from './components/ProtectedRoute';
-import './App.css';
 
 function App() {
   return (
