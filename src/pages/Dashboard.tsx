@@ -157,7 +157,7 @@ export const Dashboard = () => {
                 </thead>
                 <tbody className="divide-y divide-border">
                   {filteredEmployees.map((emp) => (
-                    <tr key={emp.id} className="hover:bg-table-hover transition-colors duration-200">
+                    <tr key={emp.id} className={`transition-colors duration-200 ${emp.isActive ? 'bg-active-rowBg hover:bg-table-hover' : 'bg-inactive-rowBg hover:bg-table-hover'}`}>
                       <td className="px-6 py-4 text-sm text-text-secondary">{emp.id}</td>
                       <td className="px-6 py-4">
                         <img
@@ -178,10 +178,10 @@ export const Dashboard = () => {
                             onChange={() => handleToggleStatus(emp)}
                             className="sr-only peer"
                           />
-                          <span className="absolute inset-0 bg-inactive-track rounded-full transition-colors duration-200 peer-checked:bg-active"></span>
-                          <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6 shadow-sm"></span>
+                          <span className="absolute inset-0 bg-inactive-track rounded-full transition-colors duration-200 peer-checked:bg-active opacity-100"></span>
+                          <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6 shadow-sm opacity-100"></span>
                         </label>
-                        <span className={`ml-3 inline-block px-2.5 py-1 text-xs font-medium rounded-full ${emp.isActive ? 'bg-active-light text-active-text' : 'bg-inactive-light text-inactive'}`}>
+                        <span className={`ml-3 inline-block px-2.5 py-1 text-xs font-medium rounded-full ${emp.isActive ? 'bg-active-light text-active-text' : 'bg-inactive-light text-inactive-text border border-inactive-border'}`}>
                           {emp.isActive ? 'Active' : 'Inactive'}
                         </span>
                       </td>

@@ -220,8 +220,8 @@ export const EmployeeForm = () => {
                     onChange={handleChange}
                     className="sr-only peer"
                   />
-                  <span className="absolute inset-0 bg-inactive-track rounded-full transition-colors duration-200 peer-checked:bg-active"></span>
-                  <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6"></span>
+                  <span className="absolute inset-0 bg-inactive-track rounded-full transition-colors duration-200 peer-checked:bg-active opacity-100"></span>
+                  <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6 shadow-sm opacity-100"></span>
                 </label>
                 <span className="text-sm font-medium text-text-primary">
                   {formData.isActive ? 'Active' : 'Inactive'}

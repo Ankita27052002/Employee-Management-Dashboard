@@ -49,11 +49,15 @@ export default {
           light: '#EDF4E3',
           text: '#4F6E1F',
           accent: '#5F7E1E',
+          rowBg: '#F1F2DF',
         },
         inactive: {
           DEFAULT: '#9A9985',
-          light: '#F5F5F0',
-          track: '#E1E3D6',
+          light: '#E4E6D6',
+          text: '#6E6D58',
+          border: '#CFCFB5',
+          track: '#D1D5C4',
+          rowBg: '#FAFAF0',
         },
         // Action Buttons
         edit: {
