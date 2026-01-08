@@ -121,25 +121,25 @@ export const EmployeeForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-bg-app py-8">
+    <div className="min-h-screen bg-page-bg py-8">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="bg-bg-card border border-border rounded-lg shadow-card p-6 mb-6">
+        <div className="bg-card-bg border border-card-border rounded-lg shadow-sm p-6 mb-6">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-text-primary">{isEditMode ? 'Edit Employee' : 'Add New Employee'}</h1>
+            <h1 className="text-2xl font-bold text-stat-label">{isEditMode ? 'Edit Employee' : 'Add New Employee'}</h1>
             <button 
               onClick={() => navigate('/dashboard')} 
-              className="bg-secondary border-2 border-secondary-border text-secondary-border hover:bg-secondary-hover px-4 py-2 rounded-lg transition-all duration-200 font-medium"
+              className="bg-card-bg border border-card-border text-stat-label hover:bg-table-hover px-4 py-2 rounded-lg transition-colors duration-200 font-medium"
             >
               Back to Dashboard
             </button>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-bg-card border border-border rounded-lg shadow-card p-6">
+        <form onSubmit={handleSubmit} className="bg-card-bg border border-card-border rounded-lg shadow-sm p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="md:col-span-2">
-              <label htmlFor="fullName" className="block text-sm font-semibold text-text-primary mb-2">
-                Full Name <span className="text-danger">*</span>
+              <label htmlFor="fullName" className="block text-sm font-semibold text-stat-label mb-2">
+                Full Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -148,21 +148,21 @@ export const EmployeeForm = () => {
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="Enter full name"
-                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus transition-all duration-200 bg-bg-card placeholder:text-text-muted text-text-primary"
+                className="w-full px-4 py-2.5 border border-input-border rounded-lg focus:outline-none focus:ring-2 focus:ring-input-focus focus:border-transparent bg-input-bg placeholder:text-input-placeholder"
               />
-              {errors.fullName && <span className="text-danger text-sm mt-1 block">{errors.fullName}</span>}
+              {errors.fullName && <span className="text-red-500 text-sm mt-1 block">{errors.fullName}</span>}
             </div>
 
             <div>
-              <label htmlFor="gender" className="block text-sm font-semibold text-text-primary mb-2">
-                Gender <span className="text-danger">*</span>
+              <label htmlFor="gender" className="block text-sm font-semibold text-stat-label mb-2">
+                Gender <span className="text-red-500">*</span>
               </label>
               <select
                 id="gender"
                 name="gender"
                 value={formData.gender}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus bg-bg-card transition-all duration-200 text-text-primary"
+                className="w-full px-4 py-2.5 border border-input-border rounded-lg focus:outline-none focus:ring-2 focus:ring-input-focus focus:border-transparent bg-input-bg"
               >
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -171,8 +171,8 @@ export const EmployeeForm = () => {
             </div>
 
             <div>
-              <label htmlFor="dateOfBirth" className="block text-sm font-semibold text-text-primary mb-2">
-                Date of Birth <span className="text-danger">*</span>
+              <label htmlFor="dateOfBirth" className="block text-sm font-semibold text-stat-label mb-2">
+                Date of Birth <span className="text-red-500">*</span>
               </label>
               <input
                 type="date"
@@ -181,21 +181,21 @@ export const EmployeeForm = () => {
                 value={formData.dateOfBirth}
                 onChange={handleChange}
                 max={new Date().toISOString().split('T')[0]}
-                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus transition-all duration-200 bg-bg-card"
+                className="w-full px-4 py-2.5 border border-input-border rounded-lg focus:outline-none focus:ring-2 focus:ring-input-focus focus:border-transparent bg-input-bg"
               />
-              {errors.dateOfBirth && <span className="text-danger text-sm mt-1 block">{errors.dateOfBirth}</span>}
+              {errors.dateOfBirth && <span className="text-red-500 text-sm mt-1 block">{errors.dateOfBirth}</span>}
             </div>
 
             <div>
-              <label htmlFor="state" className="block text-sm font-semibold text-text-primary mb-2">
-                State <span className="text-danger">*</span>
+              <label htmlFor="state" className="block text-sm font-semibold text-stat-label mb-2">
+                State <span className="text-red-500">*</span>
               </label>
               <select
                 id="state"
                 name="state"
                 value={formData.state}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus bg-bg-card transition-all duration-200 text-text-primary"
+                className="w-full px-4 py-2.5 border border-input-border rounded-lg focus:outline-none focus:ring-2 focus:ring-input-focus focus:border-transparent bg-input-bg"
               >
                 <option value="">Select State</option>
                 {indianStates.map((state) => (
@@ -204,12 +204,12 @@ export const EmployeeForm = () => {
                   </option>
                 ))}
               </select>
-              {errors.state && <span className="text-danger text-sm mt-1 block">{errors.state}</span>}
+              {errors.state && <span className="text-red-500 text-sm mt-1 block">{errors.state}</span>}
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-text-primary mb-2">
-                Status <span className="text-danger">*</span>
+              <label className="block text-sm font-semibold text-stat-label mb-2">
+                Status <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-3">
                 <label className="relative inline-block w-12 h-6 cursor-pointer">
@@ -220,31 +220,31 @@ export const EmployeeForm = () => {
                     onChange={handleChange}
                     className="sr-only peer"
                   />
-                  <span className="absolute inset-0 bg-inactive-track rounded-full transition-colors duration-200 peer-checked:bg-active opacity-100"></span>
-                  <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6 shadow-sm opacity-100"></span>
+                  <span className={`absolute inset-0 rounded-full transition-colors duration-200 ${formData.isActive ? 'bg-status-active' : 'bg-status-inactiveTrack'}`}></span>
+                  <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6"></span>
                 </label>
-                <span className="text-sm font-medium text-text-primary">
+                <span className="text-sm font-medium text-stat-label">
                   {formData.isActive ? 'Active' : 'Inactive'}
                 </span>
               </div>
             </div>
 
             <div className="md:col-span-2">
-              <label htmlFor="profileImage" className="block text-sm font-semibold text-text-primary mb-2">
-                Profile Image <span className="text-danger">*</span>
+              <label htmlFor="profileImage" className="block text-sm font-semibold text-stat-label mb-2">
+                Profile Image <span className="text-red-500">*</span>
               </label>
               <input
                 type="file"
                 id="profileImage"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:cursor-pointer hover:file:bg-primary-hover transition-all duration-200"
+                className="w-full px-4 py-2.5 border border-input-border rounded-lg focus:outline-none focus:ring-2 focus:ring-input-focus focus:border-transparent bg-input-bg file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:cursor-pointer hover:file:bg-primary-hover"
               />
-              {errors.profileImage && <span className="text-danger text-sm mt-1 block">{errors.profileImage}</span>}
+              {errors.profileImage && <span className="text-red-500 text-sm mt-1 block">{errors.profileImage}</span>}
               
               {imagePreview && (
                 <div className="mt-4 flex justify-center">
-                  <img src={imagePreview} alt="Preview" className="w-32 h-32 rounded-lg object-cover border-2 border-border" />
+                  <img src={imagePreview} alt="Preview" className="w-32 h-32 rounded-lg object-cover border-2 border-card-border" />
                 </div>
               )}
             </div>
@@ -254,13 +254,13 @@ export const EmployeeForm = () => {
             <button 
               type="button" 
               onClick={() => navigate('/dashboard')} 
-              className="px-6 py-2.5 border-2 border-input text-text-secondary hover:border-text-secondary hover:bg-table-hover rounded-lg font-medium transition-all duration-200"
+              className="px-6 py-2.5 border border-card-border text-stat-label hover:bg-table-hover rounded-lg font-medium transition-colors duration-200"
             >
               Cancel
             </button>
             <button 
               type="submit" 
-              className="px-6 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md"
+              className="px-6 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-lg font-medium transition-colors duration-200"
             >
               {isEditMode ? 'Update Employee' : 'Add Employee'}
             </button>

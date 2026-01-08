@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-bg-app text-text-primary min-h-screen;
+    @apply bg-page-bg text-stat-label min-h-screen;
   }
 }
 
