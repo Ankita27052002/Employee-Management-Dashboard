@@ -78,9 +78,9 @@ export const Dashboard = () => {
             <div className="text-4xl font-bold text-text-primary mb-2">{totalEmployees}</div>
             <div className="text-text-secondary text-sm uppercase tracking-wide font-medium">Total Employees</div>
           </div>
-          <div className="bg-primary border-2 border-primary rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200">
-            <div className="text-4xl font-bold text-white mb-2">{activeEmployees}</div>
-            <div className="text-white/90 text-sm uppercase tracking-wide font-medium">Active</div>
+          <div className="bg-bg-card border border-border rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200 border-l-4 border-l-border-accent">
+            <div className="text-4xl font-bold text-border-accent mb-2">{activeEmployees}</div>
+            <div className="text-text-secondary text-sm uppercase tracking-wide font-medium">Active</div>
           </div>
           <div className="bg-bg-card border border-border rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200">
             <div className="text-4xl font-bold text-inactive mb-2">{inactiveEmployees}</div>

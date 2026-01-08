@@ -15,7 +15,7 @@ export default {
         },
         // Header
         header: {
-          DEFAULT: '#545333',
+          DEFAULT: '#5F5E3D',
           text: '#FDFBD4',
           hover: '#D9D7B6',
         },
@@ -30,11 +30,12 @@ export default {
           DEFAULT: '#E3E1C8',
           input: '#D9D7B6',
           focus: '#6B8E23',
+          accent: '#6B8E23',
         },
         // Primary Actions
         primary: {
-          DEFAULT: '#6B8E23',
-          hover: '#5F7E1E',
+          DEFAULT: '#5F7E1E',
+          hover: '#4F6B18',
         },
         // Secondary Actions
         secondary: {
@@ -44,8 +45,8 @@ export default {
         },
         // Status Colors
         active: {
-          DEFAULT: '#3A7D44',
-          light: '#E8F5E9',
+          DEFAULT: '#6B8E23',
+          light: '#EEF3E1',
         },
         inactive: {
           DEFAULT: '#9A9985',
@@ -62,15 +63,15 @@ export default {
         },
         // Table
         table: {
-          header: '#F7F6E5',
-          headerText: '#545333',
-          hover: '#F1F0DA',
+          header: '#F2F1DA',
+          headerText: '#3E3D2A',
+          hover: '#ECEAD2',
           selected: '#E3E1C8',
         },
       },
       boxShadow: {
-        'card': '0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px 0 rgba(0, 0, 0, 0.04)',
-        'card-hover': '0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04)',
+        'card': '0 1px 3px 0 rgba(84, 83, 51, 0.12), 0 1px 2px 0 rgba(84, 83, 51, 0.08)',
+        'card-hover': '0 4px 6px -1px rgba(84, 83, 51, 0.12), 0 2px 4px -1px rgba(84, 83, 51, 0.08)',
       },
     },
   },
