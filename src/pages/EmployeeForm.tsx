@@ -220,7 +220,7 @@ export const EmployeeForm = () => {
                     onChange={handleChange}
                     className="sr-only peer"
                   />
-                  <span className="absolute inset-0 bg-border-input rounded-full transition-colors duration-200 peer-checked:bg-active"></span>
+                  <span className="absolute inset-0 bg-inactive-track rounded-full transition-colors duration-200 peer-checked:bg-active"></span>
                   <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6"></span>
                 </label>
                 <span className="text-sm font-medium text-text-primary">

@@ -46,25 +46,28 @@ export default {
         // Status Colors
         active: {
           DEFAULT: '#6B8E23',
-          light: '#EEF3E1',
+          light: '#EDF4E3',
+          text: '#4F6E1F',
+          accent: '#5F7E1E',
         },
         inactive: {
           DEFAULT: '#9A9985',
           light: '#F5F5F0',
+          track: '#E1E3D6',
         },
         // Action Buttons
         edit: {
-          DEFAULT: '#878672',
-          hover: '#6F6E5C',
+          DEFAULT: '#7A7965',
+          hover: '#6A6957',
         },
         danger: {
-          DEFAULT: '#A94442',
-          hover: '#8F3A38',
+          DEFAULT: '#B0483E',
+          hover: '#9E3F36',
         },
         // Table
         table: {
           header: '#F2F1DA',
-          headerText: '#3E3D2A',
+          headerText: '#3B3A26',
           hover: '#ECEAD2',
           selected: '#E3E1C8',
         },

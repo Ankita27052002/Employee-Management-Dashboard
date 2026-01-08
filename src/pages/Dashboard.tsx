@@ -79,8 +79,8 @@ export const Dashboard = () => {
             <div className="text-text-secondary text-sm uppercase tracking-wide font-medium">Total Employees</div>
           </div>
           <div className="bg-bg-card border border-border rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200 border-l-4 border-l-border-accent">
-            <div className="text-4xl font-bold text-border-accent mb-2">{activeEmployees}</div>
-            <div className="text-text-secondary text-sm uppercase tracking-wide font-medium">Active</div>
+            <div className="text-4xl font-bold text-active-accent mb-2">{activeEmployees}</div>
+            <div className="text-active-accent text-sm uppercase tracking-wide font-medium">Active</div>
           </div>
           <div className="bg-bg-card border border-border rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200">
             <div className="text-4xl font-bold text-inactive mb-2">{inactiveEmployees}</div>
@@ -178,10 +178,10 @@ export const Dashboard = () => {
                             onChange={() => handleToggleStatus(emp)}
                             className="sr-only peer"
                           />
-                          <span className="absolute inset-0 bg-gray-300 rounded-full transition-colors duration-200 peer-checked:bg-primary"></span>
-                          <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6"></span>
+                          <span className="absolute inset-0 bg-inactive-track rounded-full transition-colors duration-200 peer-checked:bg-active"></span>
+                          <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6 shadow-sm"></span>
                         </label>
-                        <span className={`ml-3 inline-block px-3 py-1 text-xs font-semibold rounded-full ${emp.isActive ? 'bg-primary/10 text-primary' : 'bg-gray-200 text-gray-600'}`}>
+                        <span className={`ml-3 inline-block px-2.5 py-1 text-xs font-medium rounded-full ${emp.isActive ? 'bg-active-light text-active-text' : 'bg-inactive-light text-inactive'}`}>
                           {emp.isActive ? 'Active' : 'Inactive'}
                         </span>
                       </td>
