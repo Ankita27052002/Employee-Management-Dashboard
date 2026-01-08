@@ -60,12 +60,12 @@ export const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-bg-app">
-      <header className="bg-primary text-white shadow-md print:hidden">
+      <header className="bg-header text-header-text shadow-md print:hidden">
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold">Employee Management Dashboard</h1>
           <button 
             onClick={logout} 
-            className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg transition-all duration-200 font-medium border border-white/20"
+            className="bg-white/10 hover:bg-header-hover/20 text-header-text px-4 py-2 rounded-lg transition-all duration-200 font-medium border border-white/20"
           >
             Logout
           </button>
@@ -78,9 +78,9 @@ export const Dashboard = () => {
             <div className="text-4xl font-bold text-text-primary mb-2">{totalEmployees}</div>
             <div className="text-text-secondary text-sm uppercase tracking-wide font-medium">Total Employees</div>
           </div>
-          <div className="bg-bg-card border-2 border-primary rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200">
-            <div className="text-4xl font-bold text-primary mb-2">{activeEmployees}</div>
-            <div className="text-text-secondary text-sm uppercase tracking-wide font-medium">Active</div>
+          <div className="bg-primary border-2 border-primary rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200">
+            <div className="text-4xl font-bold text-white mb-2">{activeEmployees}</div>
+            <div className="text-white/90 text-sm uppercase tracking-wide font-medium">Active</div>
           </div>
           <div className="bg-bg-card border border-border rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200">
             <div className="text-4xl font-bold text-inactive mb-2">{inactiveEmployees}</div>
@@ -96,7 +96,7 @@ export const Dashboard = () => {
                 placeholder="Search by name..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="flex-1 px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus transition-all duration-200 placeholder:text-text-muted"
+                className="flex-1 px-4 py-2 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus transition-all duration-200 placeholder:text-text-muted bg-bg-card text-text-primary"
               />
               <select
                 value={genderFilter}
@@ -121,7 +121,7 @@ export const Dashboard = () => {
             <div className="flex gap-3 w-full lg:w-auto">
               <button 
                 onClick={handlePrint} 
-                className="flex-1 lg:flex-none bg-primary-light border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-2 rounded-lg transition-all duration-200 font-medium"
+                className="flex-1 lg:flex-none bg-secondary border-2 border-secondary-border text-secondary-border hover:bg-secondary-hover px-6 py-2 rounded-lg transition-all duration-200 font-medium"
               >
                 Print List
               </button>
@@ -136,7 +136,7 @@ export const Dashboard = () => {
         </div>
 
         {filteredEmployees.length === 0 ? (
-          <div className="bg-white border border-border rounded-lg p-12 text-center">
+          <div className="bg-bg-card border border-border rounded-lg p-12 text-center">
             <p className="text-text-secondary text-lg">No employees found</p>
           </div>
         ) : (
@@ -157,7 +157,7 @@ export const Dashboard = () => {
                 </thead>
                 <tbody className="divide-y divide-border">
                   {filteredEmployees.map((emp) => (
-                    <tr key={emp.id} className="hover:bg-bg-app transition-colors duration-200">
+                    <tr key={emp.id} className="hover:bg-table-hover transition-colors duration-200">
                       <td className="px-6 py-4 text-sm text-text-secondary">{emp.id}</td>
                       <td className="px-6 py-4">
                         <img

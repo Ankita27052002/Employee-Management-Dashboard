@@ -7,47 +7,65 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary Brand (Fresh & Trustworthy)
-        primary: {
-          DEFAULT: '#0FB9B1',
-          hover: '#0AA39C',
-          light: '#ECFEFD',
-        },
-        // Backgrounds
+        // Base & Layout
         bg: {
-          app: '#F6FAFB',
+          app: '#FDFBD4',
           card: '#FFFFFF',
-          neutral: '#F6FAFB',
+          neutral: '#F7F6E5',
         },
-        // Text Hierarchy
+        // Header
+        header: {
+          DEFAULT: '#545333',
+          text: '#FDFBD4',
+          hover: '#D9D7B6',
+        },
+        // Typography
         text: {
-          primary: '#1F2933',
-          secondary: '#6B7280',
-          muted: '#9CA3AF',
+          primary: '#2F2F1F',
+          secondary: '#878672',
+          muted: '#9A9985',
         },
-        // Borders & Dividers
+        // Borders
         border: {
-          DEFAULT: '#E6F2F2',
-          input: '#D1E7E5',
-          focus: '#0FB9B1',
+          DEFAULT: '#E3E1C8',
+          input: '#D9D7B6',
+          focus: '#6B8E23',
+        },
+        // Primary Actions
+        primary: {
+          DEFAULT: '#6B8E23',
+          hover: '#5F7E1E',
+        },
+        // Secondary Actions
+        secondary: {
+          DEFAULT: '#FDFBD4',
+          border: '#6B8E23',
+          hover: '#E3E1C8',
         },
         // Status Colors
         active: {
-          DEFAULT: '#22C55E',
-          light: '#D1FAE5',
+          DEFAULT: '#3A7D44',
+          light: '#E8F5E9',
         },
         inactive: {
-          DEFAULT: '#9CA3AF',
-          light: '#F3F4F6',
+          DEFAULT: '#9A9985',
+          light: '#F5F5F0',
         },
         // Action Buttons
         edit: {
-          DEFAULT: '#3B82F6',
-          hover: '#2563EB',
+          DEFAULT: '#878672',
+          hover: '#6F6E5C',
         },
         danger: {
-          DEFAULT: '#EF4444',
-          hover: '#DC2626',
+          DEFAULT: '#A94442',
+          hover: '#8F3A38',
+        },
+        // Table
+        table: {
+          header: '#F7F6E5',
+          headerText: '#545333',
+          hover: '#F1F0DA',
+          selected: '#E3E1C8',
         },
       },
       boxShadow: {

@@ -128,7 +128,7 @@ export const EmployeeForm = () => {
             <h1 className="text-2xl font-bold text-text-primary">{isEditMode ? 'Edit Employee' : 'Add New Employee'}</h1>
             <button 
               onClick={() => navigate('/dashboard')} 
-              className="bg-primary-light border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-lg transition-all duration-200 font-medium"
+              className="bg-secondary border-2 border-secondary-border text-secondary-border hover:bg-secondary-hover px-4 py-2 rounded-lg transition-all duration-200 font-medium"
             >
               Back to Dashboard
             </button>
@@ -148,7 +148,7 @@ export const EmployeeForm = () => {
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="Enter full name"
-                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus transition-all duration-200 bg-bg-card placeholder:text-text-muted"
+                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus transition-all duration-200 bg-bg-card placeholder:text-text-muted text-text-primary"
               />
               {errors.fullName && <span className="text-danger text-sm mt-1 block">{errors.fullName}</span>}
             </div>
@@ -220,7 +220,7 @@ export const EmployeeForm = () => {
                     onChange={handleChange}
                     className="sr-only peer"
                   />
-                  <span className="absolute inset-0 bg-inactive rounded-full transition-colors duration-200 peer-checked:bg-active"></span>
+                  <span className="absolute inset-0 bg-border-input rounded-full transition-colors duration-200 peer-checked:bg-active"></span>
                   <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6"></span>
                 </label>
                 <span className="text-sm font-medium text-text-primary">
@@ -254,7 +254,7 @@ export const EmployeeForm = () => {
             <button 
               type="button" 
               onClick={() => navigate('/dashboard')} 
-              className="px-6 py-2.5 border-2 border-border-input text-text-secondary hover:border-text-secondary hover:bg-bg-app rounded-lg font-medium transition-all duration-200"
+              className="px-6 py-2.5 border-2 border-input text-text-secondary hover:border-text-secondary hover:bg-table-hover rounded-lg font-medium transition-all duration-200"
             >
               Cancel
             </button>
