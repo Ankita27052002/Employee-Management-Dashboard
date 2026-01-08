@@ -123,23 +123,23 @@ export const EmployeeForm = () => {
   return (
     <div className="min-h-screen bg-bg-app py-8">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="bg-white border border-border rounded-lg shadow-card p-6 mb-6">
+        <div className="bg-bg-card border border-border rounded-lg shadow-card p-6 mb-6">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold text-text-primary">{isEditMode ? 'Edit Employee' : 'Add New Employee'}</h1>
             <button 
               onClick={() => navigate('/dashboard')} 
-              className="bg-white border-2 border-gray-300 text-text-secondary hover:border-primary hover:text-primary px-4 py-2 rounded-lg transition-all duration-200 font-medium"
+              className="bg-primary-light border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-lg transition-all duration-200 font-medium"
             >
               Back to Dashboard
             </button>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white border border-border rounded-lg shadow-card p-6">
+        <form onSubmit={handleSubmit} className="bg-bg-card border border-border rounded-lg shadow-card p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="md:col-span-2">
               <label htmlFor="fullName" className="block text-sm font-semibold text-text-primary mb-2">
-                Full Name <span className="text-red-500">*</span>
+                Full Name <span className="text-danger">*</span>
               </label>
               <input
                 type="text"
@@ -148,21 +148,21 @@ export const EmployeeForm = () => {
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="Enter full name"
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200"
+                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus transition-all duration-200 bg-bg-card placeholder:text-text-muted"
               />
-              {errors.fullName && <span className="text-red-500 text-sm mt-1 block">{errors.fullName}</span>}
+              {errors.fullName && <span className="text-danger text-sm mt-1 block">{errors.fullName}</span>}
             </div>
 
             <div>
               <label htmlFor="gender" className="block text-sm font-semibold text-text-primary mb-2">
-                Gender <span className="text-red-500">*</span>
+                Gender <span className="text-danger">*</span>
               </label>
               <select
                 id="gender"
                 name="gender"
                 value={formData.gender}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white transition-all duration-200"
+                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus bg-bg-card transition-all duration-200 text-text-primary"
               >
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -172,7 +172,7 @@ export const EmployeeForm = () => {
 
             <div>
               <label htmlFor="dateOfBirth" className="block text-sm font-semibold text-text-primary mb-2">
-                Date of Birth <span className="text-red-500">*</span>
+                Date of Birth <span className="text-danger">*</span>
               </label>
               <input
                 type="date"
@@ -181,21 +181,21 @@ export const EmployeeForm = () => {
                 value={formData.dateOfBirth}
                 onChange={handleChange}
                 max={new Date().toISOString().split('T')[0]}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200"
+                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus transition-all duration-200 bg-bg-card"
               />
-              {errors.dateOfBirth && <span className="text-red-500 text-sm mt-1 block">{errors.dateOfBirth}</span>}
+              {errors.dateOfBirth && <span className="text-danger text-sm mt-1 block">{errors.dateOfBirth}</span>}
             </div>
 
             <div>
               <label htmlFor="state" className="block text-sm font-semibold text-text-primary mb-2">
-                State <span className="text-red-500">*</span>
+                State <span className="text-danger">*</span>
               </label>
               <select
                 id="state"
                 name="state"
                 value={formData.state}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white transition-all duration-200"
+                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus bg-bg-card transition-all duration-200 text-text-primary"
               >
                 <option value="">Select State</option>
                 {indianStates.map((state) => (
@@ -204,12 +204,12 @@ export const EmployeeForm = () => {
                   </option>
                 ))}
               </select>
-              {errors.state && <span className="text-red-500 text-sm mt-1 block">{errors.state}</span>}
+              {errors.state && <span className="text-danger text-sm mt-1 block">{errors.state}</span>}
             </div>
 
             <div>
               <label className="block text-sm font-semibold text-text-primary mb-2">
-                Status <span className="text-red-500">*</span>
+                Status <span className="text-danger">*</span>
               </label>
               <div className="flex items-center gap-3">
                 <label className="relative inline-block w-12 h-6 cursor-pointer">
@@ -220,8 +220,8 @@ export const EmployeeForm = () => {
                     onChange={handleChange}
                     className="sr-only peer"
                   />
-                  <span className="absolute inset-0 bg-gray-300 rounded-full transition-colors duration-200 peer-checked:bg-active"></span>
-                  <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6 shadow-sm"></span>
+                  <span className="absolute inset-0 bg-inactive rounded-full transition-colors duration-200 peer-checked:bg-active"></span>
+                  <span className="absolute left-1 top-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 peer-checked:translate-x-6"></span>
                 </label>
                 <span className="text-sm font-medium text-text-primary">
                   {formData.isActive ? 'Active' : 'Inactive'}
@@ -231,16 +231,16 @@ export const EmployeeForm = () => {
 
             <div className="md:col-span-2">
               <label htmlFor="profileImage" className="block text-sm font-semibold text-text-primary mb-2">
-                Profile Image <span className="text-red-500">*</span>
+                Profile Image <span className="text-danger">*</span>
               </label>
               <input
                 type="file"
                 id="profileImage"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:cursor-pointer hover:file:bg-primary-hover transition-all duration-200"
+                className="w-full px-4 py-2.5 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-border-focus focus:border-border-focus file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:cursor-pointer hover:file:bg-primary-hover transition-all duration-200"
               />
-              {errors.profileImage && <span className="text-red-500 text-sm mt-1 block">{errors.profileImage}</span>}
+              {errors.profileImage && <span className="text-danger text-sm mt-1 block">{errors.profileImage}</span>}
               
               {imagePreview && (
                 <div className="mt-4 flex justify-center">
@@ -254,13 +254,13 @@ export const EmployeeForm = () => {
             <button 
               type="button" 
               onClick={() => navigate('/dashboard')} 
-              className="px-6 py-2 border-2 border-gray-300 text-text-secondary hover:border-gray-400 hover:bg-gray-50 rounded-lg font-medium transition-all duration-200"
+              className="px-6 py-2.5 border-2 border-border-input text-text-secondary hover:border-text-secondary hover:bg-bg-app rounded-lg font-medium transition-all duration-200"
             >
               Cancel
             </button>
             <button 
               type="submit" 
-              className="px-6 py-2 bg-primary hover:bg-primary-hover text-white rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md"
+              className="px-6 py-2.5 bg-primary hover:bg-primary-hover text-white rounded-lg font-medium transition-all duration-200 shadow-sm hover:shadow-md"
             >
               {isEditMode ? 'Update Employee' : 'Add Employee'}
             </button>

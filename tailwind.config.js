@@ -7,45 +7,47 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Primary Brand (Fresh & Trustworthy)
         primary: {
-          DEFAULT: '#0faec1',
-          hover: '#0f6b6f',
-          dark: '#042f30',
-          light: '#4dc4d4',
+          DEFAULT: '#0FB9B1',
+          hover: '#0AA39C',
+          light: '#ECFEFD',
         },
-        header: {
-          DEFAULT: '#5ec2cf', // Lighter, less saturated teal
-        },
-        active: {
-          DEFAULT: '#10b981', // Green for active status
-          light: '#d1fae5',
-          text: '#047857',
-        },
+        // Backgrounds
         bg: {
-          app: '#f4fcfc',
-          card: '#ffffff',
-          muted: '#86d0cf',
-          neutral: '#f9fafb',
+          app: '#F6FAFB',
+          card: '#FFFFFF',
+          neutral: '#F6FAFB',
         },
+        // Text Hierarchy
         text: {
-          primary: '#040803',
-          secondary: '#6b7280',
-          muted: '#9ca3af',
+          primary: '#1F2933',
+          secondary: '#6B7280',
+          muted: '#9CA3AF',
         },
+        // Borders & Dividers
         border: {
-          DEFAULT: '#e5e7eb',
-          soft: '#86d0cf',
-          accent: '#d1d5db',
+          DEFAULT: '#E6F2F2',
+          input: '#D1E7E5',
+          focus: '#0FB9B1',
         },
-        success: {
-          DEFAULT: '#0faec1',
-          soft: '#f4fcfc',
+        // Status Colors
+        active: {
+          DEFAULT: '#22C55E',
+          light: '#D1FAE5',
+        },
+        inactive: {
+          DEFAULT: '#9CA3AF',
+          light: '#F3F4F6',
+        },
+        // Action Buttons
+        edit: {
+          DEFAULT: '#3B82F6',
+          hover: '#2563EB',
         },
         danger: {
-          DEFAULT: '#ef4444',
-          soft: '#fee2e2',
-          hover: '#dc2626',
-          muted: '#f87171', // Less saturated red
+          DEFAULT: '#EF4444',
+          hover: '#DC2626',
         },
       },
       boxShadow: {

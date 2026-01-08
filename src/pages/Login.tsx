@@ -29,7 +29,7 @@ export const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary to-primary-hover p-5">
-      <div className="bg-bg-card rounded-xl shadow-2xl p-10 w-full max-w-md">
+      <div className="bg-bg-card rounded-xl shadow-2xl p-10 w-full max-w-md border border-border">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-text-primary mb-2">Employee Management</h1>
           <p className="text-text-secondary text-sm">Sign in to access the dashboard</p>
@@ -44,7 +44,7 @@ export const Login = () => {
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Enter username"
               autoComplete="username"
-              className="px-4 py-3 border border-border-soft rounded-lg text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none bg-bg-card"
+              className="px-4 py-3 border border-input rounded-lg text-base transition-all focus:border-border-focus focus:ring-2 focus:ring-border-focus/20 outline-none bg-bg-card placeholder:text-text-muted"
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -56,10 +56,10 @@ export const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter password"
               autoComplete="current-password"
-              className="px-4 py-3 border border-border-soft rounded-lg text-base transition-all focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none bg-bg-card"
+              className="px-4 py-3 border border-input rounded-lg text-base transition-all focus:border-border-focus focus:ring-2 focus:ring-border-focus/20 outline-none bg-bg-card placeholder:text-text-muted"
             />
           </div>
-          {error && <div className="bg-danger-soft text-danger px-3 py-3 rounded-lg text-sm text-center">{error}</div>}
+          {error && <div className="bg-danger/10 text-danger px-3 py-3 rounded-lg text-sm text-center border border-danger/20">{error}</div>}
           <button 
             type="submit" 
             className="bg-primary text-white px-4 py-3.5 rounded-lg text-base font-semibold mt-2 hover:bg-primary-hover hover:-translate-y-0.5 transition-all shadow-md hover:shadow-lg"
